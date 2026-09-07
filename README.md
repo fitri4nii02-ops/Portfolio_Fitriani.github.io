@@ -2,7 +2,7 @@
 
 Website portfolio pribadi saya yang dibuat menggunakan HTML dan CSS.
 
-## Teknologi
+## Bahasa pemrograman yang digunakan:
 - HTML
 - CSS
 
