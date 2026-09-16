@@ -114,3 +114,12 @@ function clearErrors(form) {
     el.style.borderColor = "";
   });
 }
+function tampilPendidikan(judul, foto) {
+    document.getElementById("modal-judul").textContent = judul;
+    document.getElementById("modal-foto").src = foto;
+    document.getElementById("modalPendidikan").classList.add("show");
+}
+
+function tutupPendidikan() {
+    document.getElementById("modalPendidikan").classList.remove("show");
+}
