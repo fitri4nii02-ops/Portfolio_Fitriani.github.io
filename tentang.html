@@ -5,14 +5,15 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Tentang Saya | Fitriani</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
-  <script src="script.js"></script>
+
 <body>
 
     <!-- NAVBAR -->
@@ -27,18 +28,49 @@
 
             <ul class="nav-menu">
 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tentang.html" class="active">Tentang Saya</a></li>
-                <li><a href="pendidikan.html">Pendidikan</a></li>
-                <li><a href="keahlian.html">Keahlian</a></li>
-                <li><a href="proyek.html">Proyek</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tentang.html"
+                       class="active">
+                        Tentang Saya
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pendidikan.html">
+                        Pendidikan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="keahlian.html">
+                        Keahlian
+                    </a>
+                </li>
+
+                <li>
+                    <a href="proyek.html">
+                        Proyek
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kontak.html">
+                        Kontak
+                    </a>
+                </li>
 
             </ul>
 
         </nav>
 
     </header>
+
 
     <!-- TENTANG SAYA -->
 
@@ -47,71 +79,495 @@
         <section class="page-section">
 
             <div class="section-title">
+
                 <p>ABOUT ME</p>
+
                 <h1>Tentang Saya</h1>
+
             </div>
+
 
             <!-- KARTU UTAMA -->
 
             <div class="about-main-card">
 
                 <div class="about-photo">
-                    <img src="images/foto-fitri.jpg" alt="Foto Fitriani">
-                </div>
 
-                <div class="about-main-text">
-                    <p>
-                        Nama saya <strong>Fitriani</strong>,
-                        Saya merupakan salah satu mahasiswa Teknik Komputer
-                        di Universitas Negeri Makassar. Awalnya saya tidak
-                        terlalu tertarik dengan dunia Komputer, apalagi yang
-                        namanya "Ngoding". Akan tetapi, seiring berjalannya
-                        waktu, saya mulai terbiasa dan tertarik untuk
-                        mempelajari dan memahaminya lebih dalam lagi.
-                    </p>
+                    <img src="images/foto-fitri.jpg"
+                         alt="Foto Fitriani">
+
+
+                    <!-- DATA DIRI -->
+
+                    <div class="about-identity">
+
+                        <!-- TOMBOL NAMA -->
+
+                        <div class="identity-item"
+                             onclick="tampilNama()">
+
+                            <h3>Nama</h3>
+
+                        </div>
+
+
+                        <!-- TOMBOL NIM -->
+
+                        <div class="identity-item"
+                             onclick="tampilNim()">
+
+                            <h3>NIM</h3>
+
+                        </div>
+
+
+                        <!-- TOMBOL KELAS -->
+
+                        <div class="identity-item"
+                             onclick="tampilKelas()">
+
+                            <h3>Kelas</h3>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
-            <!-- KARTU KECIL -->
+
+            <!-- KARTU INFORMASI -->
 
             <div class="about-highlights">
 
+
+                <!-- PERJALANAN BELAJAR -->
+
                 <div class="about-highlight-item">
-                    <div class="about-highlight-icon">💻</div>
+
+                    <div class="about-highlight-icon"
+                         onclick="tampilTujuan()">
+
+                        🎯
+
+                    </div>
 
                     <div class="about-highlight-text">
+
+                        <h3>Perjalanan Belajar</h3>
+
+                        <p>
+
+                            Perjalanan saya dalam mempelajari dunia
+                            komputer, mulai dari mengenal pemrograman
+                            hingga mencoba membuat berbagai proyek
+                            sederhana.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEDANG DIPELAJARI -->
+
+                <div class="about-highlight-item">
+
+                    <div class="about-highlight-icon"
+                         onclick="tampilCoding()">
+
+                        💻
+
+                    </div>
+
+                    <div class="about-highlight-text">
+
                         <h3>Sedang Dipelajari</h3>
 
                         <p>
+
                             Beberapa bahasa pemrograman seperti HTML, CSS,
                             Java, PHP, dan Python. Saya juga belajar tentang
                             cara membuat website sederhana.
+
                         </p>
+
                     </div>
+
                 </div>
 
+
+                <!-- PENGALAMAN -->
+
                 <div class="about-highlight-item">
-                    <div class="about-highlight-icon">🎯</div>
+
+                    <div class="about-highlight-icon"
+                         onclick="tampilPengalaman()">
+
+                        🛠️
+
+                    </div>
 
                     <div class="about-highlight-text">
-                        <h3>Tujuan Portfolio</h3>
+
+                        <h3>Pengalaman</h3>
 
                         <p>
-                            Portfolio ini saya buat sebagai sarana untuk
-                            memperkenalkan diri, mendokumentasikan proses
-                            belajar saya di bidang Teknik Komputer, serta
-                            menampilkan kemampuan dan proyek-proyek sederhana
-                            yang sedang saya kembangkan.
+
+                            Beberapa pengalaman saya dalam mengerjakan tugas,
+                            latihan pemrograman, membuat website, dan
+                            mengerjakan proyek sederhana.
+
                         </p>
+
                     </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- POPUP NAMA -->
+
+            <div class="coding-modal"
+                 id="namaModal">
+
+                <div class="coding-box">
+
+                    <button class="coding-close"
+                            onclick="tutupNama()">
+
+                        ×
+
+                    </button>
+
+                    <h2>
+                        Fitriani
+                    </h2>
+
                 </div>
 
             </div>
+
+
+            <!-- POPUP NIM -->
+
+            <div class="coding-modal"
+                 id="nimModal">
+
+                <div class="coding-box">
+
+                    <button class="coding-close"
+                            onclick="tutupNim()">
+
+                        ×
+
+                    </button>
+
+                    <h2>
+                        250210500005
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- POPUP KELAS -->
+
+            <div class="coding-modal"
+                 id="kelasModal">
+
+                <div class="coding-box">
+
+                    <button class="coding-close"
+                            onclick="tutupKelas()">
+
+                        ×
+
+                    </button>
+
+
+                    <h2>
+                        Tekom D 25
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- POPUP CONTOH CODING -->
+
+            <div class="coding-modal"
+                 id="codingModal">
+
+                <div class="coding-box">
+
+                    <button class="coding-close"
+                            onclick="tutupCoding()">
+
+                        ×
+
+                    </button>
+
+                    <h2>💻 Contoh Coding</h2>
+
+                    <p>
+                        Beberapa contoh coding yang sedang saya pelajari:
+                    </p>
+
+
+                    <div class="coding-list">
+
+
+                        <div class="coding-item">
+
+                            <h3>HTML</h3>
+
+                            <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>CSS</h3>
+
+                            <pre><code>body { background: pink; }</code></pre>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>Java</h3>
+
+                            <pre><code>System.out.println("Hello World");</code></pre>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>JavaScript</h3>
+
+                            <pre><code>document.write("Hello World");</code></pre>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>PHP</h3>
+
+                            <pre><code>&lt;?php
+echo "Hello World";
+?&gt;</code></pre>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>Python</h3>
+
+                            <pre><code>print("Hello World")</code></pre>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- POPUP PERJALANAN BELAJAR -->
+
+            <div class="coding-modal"
+                 id="tujuanModal">
+
+                <div class="coding-box">
+
+                    <button class="coding-close"
+                            onclick="tutupTujuan()">
+
+                        ×
+
+                    </button>
+
+                    <h2>🎯 Perjalanan Belajar</h2>
+
+                    <p>
+                        Perjalanan saya dalam mempelajari dunia komputer:
+                    </p>
+
+
+                    <div class="coding-list">
+
+
+                        <div class="coding-item">
+
+                            <h3>🌱 Awal Belajar</h3>
+
+                            <p>
+
+                                Mulai mengenal dunia komputer dan
+                                pemrograman sebagai mahasiswa
+                                Teknik Komputer.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>💻 Mulai Mencoba</h3>
+
+                            <p>
+
+                                Mulai mempelajari HTML, CSS, Java,
+                                JavaScript, PHP, dan Python.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>🛠️ Membuat Proyek</h3>
+
+                            <p>
+
+                                Mencoba menerapkan ilmu yang dipelajari
+                                melalui tugas, latihan, dan proyek
+                                sederhana.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>🚀 Ke Depannya</h3>
+
+                            <p>
+
+                                Terus belajar dan mengembangkan kemampuan
+                                di bidang Teknik Komputer serta membuat
+                                proyek yang lebih baik.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- POPUP PENGALAMAN -->
+
+            <div class="coding-modal"
+                 id="pengalamanModal">
+
+                <div class="coding-box">
+
+                    <button class="coding-close"
+                            onclick="tutupPengalaman()">
+
+                        ×
+
+                    </button>
+
+                    <h2>🛠️ Pengalaman</h2>
+
+                    <p>
+                        Beberapa pengalaman yang pernah saya lakukan:
+                    </p>
+
+
+                    <div class="coding-list">
+
+
+                        <div class="coding-item">
+
+                            <h3>🌐 Membuat Website</h3>
+
+                            <p>
+
+                                Membuat website sederhana menggunakan
+                                HTML, CSS, dan JavaScript.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>💻 Latihan Pemrograman</h3>
+
+                            <p>
+
+                                Mengerjakan latihan pemrograman menggunakan
+                                Java dan JavaScript.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>🗄️ Database</h3>
+
+                            <p>
+
+                                Mempelajari database dan mencoba
+                                menghubungkannya dengan program PHP.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="coding-item">
+
+                            <h3>📚 Tugas Kuliah</h3>
+
+                            <p>
+
+                                Mengerjakan berbagai tugas dan proyek
+                                sederhana dalam perkuliahan Teknik Komputer.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
         </section>
 
     </main>
+
 
     <!-- FOOTER -->
 
@@ -119,12 +575,19 @@
 
         <h3>Fitri</h3>
 
-        <p>Portfolio Fitriani</p>
+        <p>
+            Portfolio Fitriani
+        </p>
 
-        <p>© 2026 Fitriani</p>
+        <p>
+            © 2026 Fitriani
+        </p>
 
     </footer>
-<script src="script.js"></script>
+
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

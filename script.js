@@ -123,3 +123,58 @@ function tampilPendidikan(judul, foto) {
 function tutupPendidikan() {
     document.getElementById("modalPendidikan").classList.remove("show");
 }
+function tampilCoding() {
+    document.getElementById("codingModal").classList.add("show");
+}
+
+function tutupCoding() {
+    document.getElementById("codingModal").classList.remove("show");
+}
+// POPUP TUJUAN PORTFOLIO
+
+function tampilTujuan() {
+    document.getElementById("tujuanModal").classList.add("show");
+}
+
+function tutupTujuan() {
+    document.getElementById("tujuanModal").classList.remove("show");
+}
+// POPUP NAMA
+
+function tampilNama() {
+    document.getElementById("namaModal").classList.add("show");
+}
+
+function tutupNama() {
+    document.getElementById("namaModal").classList.remove("show");
+}
+function tampilPengalaman() {
+    document.getElementById("pengalamanModal").classList.add("show");
+}
+
+function tutupPengalaman() {
+    document.getElementById("pengalamanModal").classList.remove("show");
+}
+function tampilNama() {
+    document.getElementById("namaModal").classList.add("show");
+}
+
+function tutupNama() {
+    document.getElementById("namaModal").classList.remove("show");
+}
+
+function tampilNim() {
+    document.getElementById("nimModal").classList.add("show");
+}
+
+function tutupNim() {
+    document.getElementById("nimModal").classList.remove("show");
+}
+
+function tampilKelas() {
+    document.getElementById("kelasModal").classList.add("show");
+}
+
+function tutupKelas() {
+    document.getElementById("kelasModal").classList.remove("show");
+}
