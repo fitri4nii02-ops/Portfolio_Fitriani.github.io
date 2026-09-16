@@ -1,77 +1,254 @@
-<div class="sekolah-list"> 
- 
-    <!-- TK --> 
-    <div class="sekolah-item" onclick="tampilPendidikan('TK', 'images/tk-fitr.jpg')"> 
-        <div class="sekolah-logo">🧸</div> 
- 
-        <div class="sekolah-info"> 
-            <span>TK</span> 
-            <h3 class="nama-sekolah"> 
-                TK USWATUN HASANAH 
-            </h3> 
-        </div> 
-    </div> 
- 
-    <!-- SD --> 
-    <div class="sekolah-item" onclick="tampilPendidikan('SD', 'images/sd-fitri.jpg')"> 
-        <div class="sekolah-logo">🏫</div> 
- 
-        <div class="sekolah-info"> 
-            <span>SD</span> 
-            <h3 class="nama-sekolah"> 
-                SDN INPRES KALEMBA 
-            </h3> 
-        </div> 
-    </div> 
- 
-    <!-- SMP --> 
-    <div class="sekolah-item" onclick="tampilPendidikan('SMP', 'images/smp-fitri.jpg')"> 
-        <div class="sekolah-logo">🏫</div> 
- 
-        <div class="sekolah-info"> 
-            <span>SMP</span> 
-            <h3 class="nama-sekolah"> 
-                SMP NEGERI 2 BELO 
-            </h3> 
-        </div> 
-    </div> 
- 
-    <!-- SMA --> 
-    <div class="sekolah-item" onclick="tampilPendidikan('SMA', 'images/sma-fitri.jpg')"> 
-        <div class="sekolah-logo">🏫</div> 
- 
-        <div class="sekolah-info"> 
-            <span>SMA</span> 
-            <h3 class="nama-sekolah"> 
-                SMA NEGERI 1 BELO 
-            </h3> 
-        </div> 
-    </div> 
- 
-    <!-- PERGURUAN TINGGI --> 
-    <div class="sekolah-item" onclick="tampilPendidikan('Perguruan Tinggi', 'images/kuliah-fitri.jpg')"> 
-        <div class="sekolah-logo">🎓</div> 
- 
-        <div class="sekolah-info"> 
-            <span>Perguruan Tinggi</span> 
-            <h3 class="nama-sekolah"> 
-                UNIVERSITAS NEGERI MAKASSAR 
-            </h3> 
-        </div> 
-    </div> 
- 
-</div> 
- 
- 
-<!-- MODAL FOTO --> 
-<div class="modal-overlay" id="modalPendidikan"> 
-    <div class="modal-box"> 
- 
-        <button class="modal-close" onclick="tutupPendidikan()">×</button> 
- 
-        <h2 id="modal-judul"></h2> 
- 
-        <img id="modal-foto" src="" alt="Foto Sekolah"> 
- 
-    </div> 
-</div>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pendidikan | Fitriani</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Fitri
+            </div>
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tentang.html">
+                        Tentang Saya
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pendidikan.html" class="active">
+                        Pendidikan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="keahlian.html">
+                        Keahlian
+                    </a>
+                </li>
+
+                <li>
+                    <a href="proyek.html">
+                        Proyek
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kontak.html">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PENDIDIKAN -->
+
+    <main>
+
+        <section class="pendidikan-section">
+
+            <h1>Riwayat Pendidikan</h1>
+
+            <p>
+                Berikut adalah riwayat pendidikan saya.
+            </p>
+
+
+            <div class="sekolah-list">
+
+
+                <!-- TK -->
+
+                <div class="sekolah-item"
+                     onclick="tampilPendidikan('TK', 'images/tk-fitri.jpg')">
+
+                    <div class="sekolah-logo">
+                        🧸
+                    </div>
+
+                    <div class="sekolah-info">
+
+                        <span>TK</span>
+
+                        <h3>
+                            TK USWATUN HASANAH
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SD -->
+
+                <div class="sekolah-item"
+                     onclick="tampilPendidikan('SD', 'images/sd-fitri.jpg')">
+
+                    <div class="sekolah-logo">
+                        🏫
+                    </div>
+
+                    <div class="sekolah-info">
+
+                        <span>SD</span>
+
+                        <h3>
+                            SDN INPRES KALEMBA
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SMP -->
+
+                <div class="sekolah-item"
+                     onclick="tampilPendidikan('SMP', 'images/smp-fitri.jpg')">
+
+                    <div class="sekolah-logo">
+                        🏫
+                    </div>
+
+                    <div class="sekolah-info">
+
+                        <span>SMP</span>
+
+                        <h3>
+                            SMP NEGERI 2 BELO
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SMA -->
+
+                <div class="sekolah-item"
+                     onclick="tampilPendidikan('SMA', 'images/sma-fitri.jpg')">
+
+                    <div class="sekolah-logo">
+                        🏫
+                    </div>
+
+                    <div class="sekolah-info">
+
+                        <span>SMA</span>
+
+                        <h3>
+                            SMA NEGERI 1 BELO
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERGURUAN TINGGI -->
+
+                <div class="sekolah-item"
+                     onclick="tampilPendidikan('Perguruan Tinggi', 'images/kuliah-fitri.jpg')">
+
+                    <div class="sekolah-logo">
+                        🎓
+                    </div>
+
+                    <div class="sekolah-info">
+
+                        <span>Perguruan Tinggi</span>
+
+                        <h3>
+                            UNIVERSITAS NEGERI MAKASSAR
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- MODAL FOTO -->
+
+    <div class="modal-overlay"
+         id="modalPendidikan">
+
+        <div class="modal-box">
+
+            <button class="modal-close"
+                    onclick="tutupPendidikan()">
+                ×
+            </button>
+
+            <h2 id="modal-judul"></h2>
+
+            <img id="modal-foto"
+                 src=""
+                 alt="Foto Sekolah">
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Fitri
+        </h3>
+
+        <p>
+            Portfolio Fitriani
+        </p>
+
+        <p>
+            © 2026 Fitriani
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
