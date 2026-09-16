@@ -1,86 +1,266 @@
 /* =========================
+   DASAR WEBSITE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5fa;
+    color: #4a2636;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.15);
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu a {
+    display: block;
+
+    padding: 8px 15px;
+
+    text-decoration: none;
+
+    color: #4a2636;
+
+    font-weight: 600;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #e91e63;
+    background: #ffe0ec;
+}
+
+/* MENU YANG SEDANG DIBUKA */
+
+.nav-menu a.active {
+    color: #ffffff;
+    background: #e91e63;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.25);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 60px;
+
+    background: #ffffff;
+
+    border-top: 2px solid #ffe0ec;
+
+    color: #684052;
+}
+
+footer h3 {
+    color: #e91e63;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
    RIWAYAT PENDIDIKAN
 ========================= */
 
+.pendidikan-section {
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    padding: 0 25px;
+
+    text-align: center;
+}
+
+.pendidikan-section h1 {
+    font-size: 38px;
+
+    color: #e91e63;
+
+    margin-bottom: 10px;
+}
+
+.pendidikan-section > p {
+    color: #684052;
+
+    margin-bottom: 35px;
+}
+
 .sekolah-list {
-    max-width: 800px;
+    width: 100%;
+
+    max-width: 850px;
+
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .sekolah-item {
+    width: 100%;
+
+    min-height: 105px;
+
     display: flex;
+
     align-items: center;
-    gap: 22px;
-    padding: 22px 28px;
-    background: linear-gradient(135deg, #ffffff, #fff5fa);
-    border-radius: 20px;
-    border-left: 5px solid #e91e63;
-    box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12);
-    transition: 0.3s ease;
+
+    text-align: left;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    margin: 0 auto 20px;
+
+    background: #ffffff;
+
+    border: 2px solid #ffd0e0;
+
+    border-radius: 18px;
+
+    box-shadow: 0 7px 20px rgba(216, 27, 96, 0.12);
+
     cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
 .sekolah-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(216, 27, 96, 0.22);
+    background: #ffe0ec;
+
+    border-color: #e91e63;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.20);
 }
 
 .sekolah-logo {
     width: 65px;
     height: 65px;
-    flex-shrink: 0;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    background: #ffe0ec;
+
+    flex-shrink: 0;
+
+    background: #e91e63;
+
+    color: white;
+
     border-radius: 50%;
-    font-size: 30px;
-    box-shadow: 0 6px 15px rgba(216, 27, 96, 0.15);
-    transition: 0.3s;
+
+    font-size: 32px;
 }
 
-.sekolah-item:hover .sekolah-logo {
-    transform: scale(1.1);
-    background: #ffd1e2;
+.sekolah-info {
+    flex: 1;
 }
 
 .sekolah-info span {
-    display: inline-block;
+    display: block;
+
     color: #e91e63;
+
     font-size: 14px;
+
     font-weight: bold;
+
     margin-bottom: 5px;
 }
 
 .sekolah-info h3 {
     color: #4a2636;
-    font-size: 20px;
-    margin: 0;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.sekolah-info h3:hover {
-    color: #e91e63;
-    text-decoration: underline;
+    margin: 0;
+
+    font-size: 19px;
 }
 
 
 /* =========================
-   MODAL FOTO
+   MODAL PENDIDIKAN
 ========================= */
 
 .modal-overlay {
     display: none;
+
     position: fixed;
+
     inset: 0;
-    background: rgba(74, 38, 54, 0.65);
+
+    background: rgba(74, 38, 54, 0.70);
+
     align-items: center;
+
     justify-content: center;
-    z-index: 9999;
+
+    z-index: 2000;
+
     padding: 20px;
 }
 
@@ -90,59 +270,56 @@
 
 .modal-box {
     position: relative;
+
     width: 90%;
-    max-width: 550px;
-    background: white;
-    padding: 25px;
+
+    max-width: 650px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
     border-radius: 20px;
+
     text-align: center;
-    animation: modalMuncul 0.3s ease;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 .modal-box h2 {
-    color: #d81b60;
-    margin-bottom: 18px;
+    color: #e91e63;
+
+    margin-bottom: 20px;
 }
 
-#modal-foto {
+.modal-box img {
     display: block;
+
     width: 100%;
-    max-height: 400px;
+
+    max-height: 500px;
+
     object-fit: contain;
-    border-radius: 15px;
-    margin: 0 auto;
+
+    border-radius: 12px;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
+
+    top: 8px;
+
     right: 15px;
-    width: 35px;
-    height: 35px;
+
     border: none;
-    border-radius: 50%;
-    background: #ffe0ec;
-    color: #d81b60;
-    font-size: 24px;
+
+    background: none;
+
+    color: #e91e63;
+
+    font-size: 32px;
+
     cursor: pointer;
-    z-index: 2;
-}
-
-.modal-close:hover {
-    background: #e91e63;
-    color: white;
-}
-
-@keyframes modalMuncul {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 
@@ -151,130 +328,51 @@
 ========================= */
 
 .skills-container {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    padding: 0 25px;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
 .skill-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 25px;
-    background: linear-gradient(135deg, #ffffff, #fff5fa);
-    border-radius: 20px;
-    border: 1px solid #ffe0ec;
-    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.10);
+    background: #ffffff;
+
+    padding: 35px 25px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    border: 2px solid #ffe0ec;
+
+    box-shadow: 0 7px 20px rgba(216, 27, 96, 0.10);
+
     transition: 0.3s ease;
-    animation: skillMuncul 0.8s ease both;
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 35px rgba(216, 27, 96, 0.20);
+    transform: translateY(-7px);
+
+    border-color: #e91e63;
+
+    background: #fff0f6;
 }
 
-.skill-icon {
-    width: 70px;
-    height: 70px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffe0ec;
-    border-radius: 18px;
-    font-size: 35px;
-    transition: 0.3s ease;
-}
+.skill-card h3 {
+    color: #e91e63;
 
-.skill-card:hover .skill-icon {
-    transform: scale(1.12) rotate(5deg);
-    background: #ffd1e2;
-}
-
-.skill-content {
-    flex: 1;
-}
-
-.skill-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 10px;
 }
 
-.skill-name h3 {
-    margin: 0;
-    color: #4a2636;
-}
-
-.skill-name span {
-    color: #e91e63;
-    font-weight: bold;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 9px;
-    background: #ffe0ec;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-.skill-progress {
-    height: 100%;
-    width: 20%;
-    background: linear-gradient(90deg, #e91e63, #ff80ab);
-    border-radius: 20px;
-    animation: progressMuncul 1.5s ease;
-}
-
-.skill-content p {
-    margin: 0;
+.skill-card p {
     color: #684052;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.skill-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.skill-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.skill-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.skill-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-@keyframes skillMuncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes progressMuncul {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 20%;
-    }
 }
 
 
@@ -283,40 +381,73 @@
 ========================= */
 
 .hero {
-    min-height: 75vh;
+    min-height: 620px;
+
     display: flex;
-    align-items: center;
+
+    align-items: flex-start;
+
     justify-content: center;
-    position: relative;
-    overflow: hidden;
+
+    padding: 65px 25px 40px;
+
     background:
-        radial-gradient(circle at 85% 20%, #ffe0ec 0%, transparent 25%),
-        radial-gradient(circle at 10% 80%, #ffd6e6 0%, transparent 25%);
+        radial-gradient(
+            circle at top right,
+            #ffe0ec 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            #ffd1e2 0%,
+            transparent 30%
+        );
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 900px;
+
     width: 100%;
+
+    padding: 45px 35px;
+
     text-align: center;
-    padding: 70px 20px;
+
     position: relative;
-    z-index: 2;
-    margin: 0 auto;
-    animation: homeMuncul 1s ease;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 2px solid #ffe0ec;
+
+    border-radius: 30px;
+
+    box-shadow: 0 12px 35px rgba(216, 27, 96, 0.12);
 }
 
 .small-title {
-    color: #e91e63;
+    display: inline-block;
+
+    color: #ffffff;
+
+    background: #e91e63;
+
+    padding: 6px 18px;
+
+    border-radius: 20px;
+
     font-weight: bold;
-    letter-spacing: 3px;
+
+    font-size: 16px;
+
     margin-bottom: 15px;
-    animation: turun 0.8s ease;
 }
 
 .hero h1 {
-    font-size: 55px;
-    margin: 10px 0;
+    font-size: 52px;
+
     color: #4a2636;
+
+    margin-bottom: 15px;
 }
 
 .hero h1 span {
@@ -324,132 +455,132 @@
 }
 
 .hero-description {
-    font-size: 24px;
+    font-size: 22px;
+
     font-weight: bold;
+
     color: #684052;
-    margin: 15px 0;
+
+    margin-bottom: 15px;
 }
 
 .hero-text {
     max-width: 650px;
+
     margin: 0 auto 30px;
+
     color: #684052;
-    line-height: 1.8;
+
     font-size: 16px;
 }
 
 .hero-buttons {
     display: flex;
+
     justify-content: center;
-    align-items: center;
+
     gap: 15px;
+
     margin-top: 25px;
 }
 
-.hero-buttons .btn {
-    padding: 13px 25px;
-    border-radius: 30px;
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border-radius: 25px;
+
     text-decoration: none;
+
     font-weight: bold;
+
     transition: 0.3s ease;
 }
 
-.hero-buttons .primary {
+.btn.primary {
     background: #e91e63;
-    color: white;
-    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.25);
+
+    color: #ffffff;
+
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.25);
 }
 
-.hero-buttons .primary:hover {
+.btn.primary:hover {
     background: #d81b60;
-    transform: translateY(-4px);
+
+    transform: translateY(-3px);
 }
 
-.hero-buttons .secondary {
+.btn.secondary {
     border: 2px solid #e91e63;
+
     color: #e91e63;
-    background: white;
+
+    background: #ffffff;
 }
 
-.hero-buttons .secondary:hover {
+.btn.secondary:hover {
     background: #ffe0ec;
-    transform: translateY(-4px);
+
+    transform: translateY(-3px);
 }
 
 .hero-decoration {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
 }
 
 .circle {
-    position: absolute;
+    width: 35px;
+
+    height: 35px;
+
     border-radius: 50%;
+
+    background: #ffc1d8;
 }
 
 .circle-one {
-    width: 180px;
-    height: 180px;
-    background: #ffe0ec;
-    top: 30px;
-    left: -80px;
-    animation: mengambang 4s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 .circle-two {
-    width: 120px;
-    height: 120px;
-    background: #ffd1e2;
-    bottom: 20px;
-    right: -50px;
-    animation: mengambang 5s ease-in-out infinite;
+    width: 20px;
+
+    height: 20px;
+
+    background: #e91e63;
+
+    animation: float 2s ease-in-out infinite;
 }
 
 .code-box {
-    position: absolute;
-    right: 30px;
-    top: 100px;
-    padding: 12px 18px;
-    background: white;
-    color: #e91e63;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(216, 27, 96, 0.12);
-    font-family: monospace;
-    animation: mengambang 3s ease-in-out infinite;
+    width: 120px;
+
+    height: 10px;
+
+    background: #e91e63;
+
+    border-radius: 10px;
 }
 
-@keyframes homeMuncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+@keyframes float {
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes turun {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes mengambang {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-10px);
     }
 }
 
@@ -459,139 +590,90 @@
 ========================= */
 
 .contact-container {
-    max-width: 950px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 30px;
-    align-items: stretch;
+    max-width: 900px;
+
+    margin: 45px auto 0;
+
+    padding: 0 25px;
 }
 
-.contact-intro {
-    background: linear-gradient(135deg, #e91e63, #d81b60);
-    color: white;
-    padding: 40px 30px;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 15px 35px rgba(216, 27, 96, 0.20);
-    position: relative;
-    overflow: hidden;
-    animation: kontakKiri 0.8s ease;
-}
+.contact-container h1 {
+    text-align: center;
 
-.contact-intro::after {
-    content: "💗";
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
-    font-size: 80px;
-    opacity: 0.15;
-}
-
-.contact-intro h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.contact-intro p {
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-.contact-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12);
-    border: 1px solid #ffe0ec;
-    animation: kontakKanan 0.8s ease;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    margin-bottom: 15px;
-    background: #fff8fb;
-    border-radius: 18px;
-    transition: 0.3s ease;
-}
-
-.contact-item:last-child {
-    margin-bottom: 0;
-}
-
-.contact-item:hover {
-    transform: translateX(8px);
-    background: #ffeaf2;
-    box-shadow: 0 8px 20px rgba(216, 27, 96, 0.10);
-}
-
-.contact-icon {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffe0ec;
-    border-radius: 16px;
-    font-size: 28px;
-    transition: 0.3s ease;
-}
-
-.contact-item:hover .contact-icon {
-    transform: scale(1.1) rotate(5deg);
-    background: #ffd1e2;
-}
-
-.contact-item h3 {
-    margin: 0 0 5px;
-    color: #4a2636;
-    font-size: 18px;
-}
-
-.contact-item p {
-    margin: 0;
-}
-
-.contact-item a {
     color: #e91e63;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s ease;
+
+    font-size: 38px;
+
+    margin-bottom: 30px;
 }
 
-.contact-item a:hover {
-    color: #d81b60;
-    text-decoration: underline;
+.contact-form {
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 2px solid #ffe0ec;
+
+    box-shadow: 0 7px 20px rgba(216, 27, 96, 0.10);
 }
 
-@keyframes kontakKiri {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
+.contact-form label {
+    display: block;
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    margin-bottom: 5px;
+
+    font-weight: bold;
 }
 
-@keyframes kontakKanan {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #f3b6cb;
+
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #e91e63;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #d81b60;
+}
+
+.error-message {
+    display: block;
+
+    margin-top: -10px;
+
+    margin-bottom: 10px;
 }
 
 
@@ -599,162 +681,46 @@
    TENTANG SAYA
 ========================= */
 
-.about-main-card {
-    max-width: 950px;
-    margin: 40px auto 30px;
-    padding: 35px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    background: linear-gradient(135deg, #ffffff, #fff5fa);
-    border-radius: 30px;
-    border: 1px solid #ffe0ec;
-    box-shadow: 0 15px 35px rgba(216, 27, 96, 0.12);
-    position: relative;
-    overflow: hidden;
-    animation: tentangMuncul 0.8s ease;
+.about-container {
+    max-width: 900px;
+
+    margin: 45px auto 0;
+
+    padding: 0 25px;
 }
 
-.about-main-card::before {
-    content: "💗";
-    position: absolute;
-    top: -20px;
-    right: 25px;
-    font-size: 100px;
-    opacity: 0.08;
-}
+.about-container h1 {
+    text-align: center;
 
-.about-photo {
-    width: 220px;
-    height: 220px;
-    flex-shrink: 0;
-    padding: 7px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #e91e63, #ff80ab);
-    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.20);
-    transition: 0.4s ease;
-}
-
-.about-photo:hover {
-    transform: scale(1.05) rotate(3deg);
-}
-
-.about-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    border: 5px solid white;
-}
-
-.about-main-text {
-    position: relative;
-    z-index: 1;
-}
-
-.about-main-text p {
-    color: #684052;
-    font-size: 17px;
-    line-height: 1.9;
-    margin: 0;
-}
-
-.about-main-text strong {
     color: #e91e63;
+
+    font-size: 38px;
+
+    margin-bottom: 30px;
 }
 
-.about-highlights {
-    max-width: 950px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
+.about-card {
+    background: #ffffff;
 
-.about-highlight-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 25px;
-    background: white;
-    border-radius: 22px;
-    border: 1px solid #ffe0ec;
-    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.10);
-    transition: 0.3s ease;
-    animation: highlightMuncul 0.8s ease both;
-}
+    padding: 35px;
 
-.about-highlight-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.about-highlight-item:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.about-highlight-item:hover {
-    transform: translateY(-8px);
-    background: #fff8fb;
-}
-
-.about-highlight-icon {
-    width: 60px;
-    height: 60px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffe0ec;
     border-radius: 18px;
-    font-size: 30px;
-    transition: 0.3s ease;
+
+    border: 2px solid #ffe0ec;
+
+    box-shadow: 0 7px 20px rgba(216, 27, 96, 0.10);
 }
 
-.about-highlight-item:hover .about-highlight-icon {
-    transform: scale(1.12) rotate(5deg);
-    background: #ffd1e2;
+.about-card h2 {
+    color: #e91e63;
+
+    margin-bottom: 10px;
 }
 
-.about-highlight-text {
-    flex: 1;
-}
-
-.about-highlight-text h3 {
-    margin: 0 0 10px;
-    color: #4a2636;
-    font-size: 20px;
-}
-
-.about-highlight-text p {
-    margin: 0;
+.about-card p {
     color: #684052;
-    font-size: 14px;
-    line-height: 1.7;
-}
 
-@keyframes tentangMuncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes highlightMuncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    margin-bottom: 15px;
 }
 
 
@@ -763,145 +729,61 @@
 ========================= */
 
 .project-container {
-    max-width: 950px;
-    margin: 40px auto;
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    padding: 0 25px;
+}
+
+.project-container h1 {
+    text-align: center;
+
+    color: #e91e63;
+
+    font-size: 38px;
+
+    margin-bottom: 30px;
+}
+
+.project-list {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
 .project-card {
-    position: relative;
-    display: flex;
-    gap: 20px;
-    padding: 28px;
-    background: linear-gradient(135deg, #ffffff, #fff5fa);
-    border-radius: 25px;
-    border: 1px solid #ffe0ec;
-    box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12);
-    overflow: hidden;
-    transition: 0.4s ease;
-    animation: proyekMuncul 0.8s ease both;
-}
+    background: #ffffff;
 
-.project-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #e91e63, #ff80ab);
-}
+    padding: 30px;
 
-.project-card::after {
-    content: "✦";
-    position: absolute;
-    right: 20px;
-    bottom: 5px;
-    font-size: 70px;
-    color: #e91e63;
-    opacity: 0.05;
-}
+    border-radius: 18px;
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(216, 27, 96, 0.20);
-}
+    border: 2px solid #ffe0ec;
 
-.project-icon {
-    width: 70px;
-    height: 70px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffe0ec;
-    border-radius: 20px;
-    font-size: 35px;
-    transition: 0.4s ease;
-}
+    box-shadow: 0 7px 20px rgba(216, 27, 96, 0.10);
 
-.project-card:hover .project-icon {
-    transform: scale(1.12) rotate(5deg);
-    background: #ffd1e2;
-}
-
-.project-content {
-    flex: 1;
-    position: relative;
-    z-index: 1;
-}
-
-.project-number {
-    display: inline-block;
-    color: #e91e63;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 7px;
-}
-
-.project-content h2 {
-    margin: 0 0 10px;
-    color: #4a2636;
-    font-size: 22px;
-}
-
-.project-content p {
-    margin: 0 0 18px;
-    color: #684052;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.project-tech span {
-    padding: 6px 12px;
-    background: #ffe0ec;
-    color: #d81b60;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
     transition: 0.3s ease;
 }
 
-.project-tech span:hover {
-    background: #e91e63;
-    color: white;
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #e91e63;
+
+    background: #fff0f6;
 }
 
-.project-card:nth-child(1) {
-    animation-delay: 0.1s;
+.project-card h3 {
+    color: #e91e63;
+
+    margin-bottom: 10px;
 }
 
-.project-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.project-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.project-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-@keyframes proyekMuncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.project-card p {
+    color: #684052;
 }
 
 
@@ -909,15 +791,38 @@
    TAMPILAN HP
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
-    .skills-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 20px;
     }
 
-    .skill-card {
-        padding: 20px;
+    .nav-menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .nav-menu a {
+        padding: 6px 10px;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 40px 15px;
+    }
+
+    .hero-content {
+        padding: 35px 20px;
     }
 
     .hero h1 {
@@ -925,113 +830,66 @@
     }
 
     .hero-description {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .hero-buttons {
         flex-direction: column;
+
         align-items: center;
     }
 
-    .hero-buttons .btn {
+    .btn {
         width: 200px;
+
         text-align: center;
     }
 
-    .code-box {
-        display: none;
-    }
-
-    .contact-container {
+    .skills-container {
         grid-template-columns: 1fr;
-        margin: 30px 20px;
+
+        margin-top: 35px;
     }
 
-    .contact-intro {
-        padding: 30px 25px;
-    }
-
-    .contact-card {
-        padding: 20px;
-    }
-
-    .contact-item {
-        padding: 15px;
-    }
-
-    .about-main-card {
-        flex-direction: column;
-        text-align: center;
-        margin: 30px 20px;
-        padding: 30px 20px;
-    }
-
-    .about-photo {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-main-text p {
-        font-size: 15px;
-    }
-
-    .about-highlights {
+    .project-list {
         grid-template-columns: 1fr;
-        margin: 0 20px;
-    }
-
-    .about-highlight-item {
-        padding: 20px;
-    }
-
-    .project-container {
-        grid-template-columns: 1fr;
-        margin: 30px 20px;
-    }
-
-    .project-card {
-        padding: 22px;
-    }
-
-    .project-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-    }
-
-    .project-content h2 {
-        font-size: 19px;
-    }
-
-    /* PENDIDIKAN */
-
-    .sekolah-list {
-        margin: 30px 20px;
     }
 
     .sekolah-item {
-        padding: 18px 20px;
+        padding: 15px;
+
         gap: 15px;
     }
 
     .sekolah-logo {
-        width: 55px;
-        height: 55px;
+        width: 50px;
+
+        height: 50px;
+
         font-size: 25px;
     }
 
     .sekolah-info h3 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
-    /* MODAL FOTO */
-
     .modal-box {
-        width: 90%;
+        width: 95%;
+
         padding: 20px;
     }
 
-    #modal-foto {
-        max-height: 300px;
+    .contact-container,
+    .about-container,
+    .project-container,
+    .pendidikan-section {
+        margin-top: 35px;
+    }
+
+    .pendidikan-section h1,
+    .contact-container h1,
+    .about-container h1,
+    .project-container h1 {
+        font-size: 30px;
     }
 }
