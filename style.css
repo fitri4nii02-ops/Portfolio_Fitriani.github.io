@@ -1,154 +1,153 @@
-/* ========================= 
-   RIWAYAT PENDIDIKAN 
+/* =========================
+   RIWAYAT PENDIDIKAN
 ========================= */
 
-.sekolah-list { 
-    max-width: 800px; 
-    margin: 0 auto; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 20px; 
-} 
- 
-.sekolah-item { 
-    display: flex; 
-    align-items: center; 
-    gap: 22px; 
-    padding: 22px 28px; 
-    background: linear-gradient(135deg, #ffffff, #fff5fa); 
-    border-radius: 20px; 
-    border-left: 5px solid #e91e63; 
-    box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12); 
-    transition: 0.3s ease; 
-} 
- 
-.sekolah-item:hover { 
-    transform: translateY(-6px); 
-    box-shadow: 0 18px 35px rgba(216, 27, 96, 0.22); 
-} 
- 
-/* LOGO PENDIDIKAN */ 
- 
-.sekolah-logo { 
-    width: 65px; 
-    height: 65px; 
-    flex-shrink: 0; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    background: #ffe0ec; 
-    border-radius: 50%; 
-    font-size: 30px; 
-    box-shadow: 0 6px 15px rgba(216, 27, 96, 0.15); 
-    transition: 0.3s; 
-} 
- 
-.sekolah-item:hover .sekolah-logo { 
-    transform: scale(1.1); 
-    background: #ffd1e2; 
-} 
- 
-/* NAMA SEKOLAH */ 
- 
-.sekolah-info span { 
-    display: inline-block; 
-    color: #e91e63; 
-    font-size: 14px; 
-    font-weight: bold; 
-    margin-bottom: 5px; 
-} 
- 
-.sekolah-info h3 { 
-    color: #4a2636; 
-    font-size: 20px; 
-    margin: 0; 
-    cursor: pointer; 
-    transition: 0.3s; 
-} 
- 
-.sekolah-info h3:hover { 
-    color: #e91e63; 
-    text-decoration: underline; 
-} 
- 
-/* ========================= 
-   MODAL FOTO 
-========================= */ 
- 
-.modal-overlay { 
-    display: none; 
-    position: fixed; 
-    inset: 0; 
-    background: rgba(74, 38, 54, 0.65); 
-    align-items: center; 
-    justify-content: center; 
-    z-index: 9999; 
-    padding: 20px; 
-} 
- 
-.modal-overlay.show { 
-    display: flex; 
-} 
- 
-.modal-box { 
-    position: relative; 
-    width: 90%; 
-    max-width: 550px; 
-    background: white; 
-    padding: 25px; 
-    border-radius: 20px; 
-    text-align: center; 
-    animation: modalMuncul 0.3s ease; 
-} 
- 
-.modal-box h2 { 
-    color: #d81b60; 
-    margin-bottom: 18px; 
-} 
- 
-#modal-foto { 
-    display: block; 
-    width: 100%; 
-    max-height: 400px; 
-    object-fit: contain; 
-    border-radius: 15px; 
-    margin: 0 auto; 
-} 
- 
-.modal-close { 
-    position: absolute; 
-    top: 10px; 
-    right: 15px; 
-    width: 35px; 
-    height: 35px; 
-    border: none; 
-    border-radius: 50%; 
-    background: #ffe0ec; 
-    color: #d81b60; 
-    font-size: 24px; 
-    cursor: pointer; 
-    z-index: 2; 
-} 
- 
-.modal-close:hover { 
-    background: #e91e63; 
-    color: white; 
-} 
- 
-@keyframes modalMuncul { 
-    from { 
-        opacity: 0; 
-        transform: scale(0.8); 
-    } 
- 
-    to { 
-        opacity: 1; 
-        transform: scale(1); 
-    } 
+.sekolah-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+.sekolah-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 22px 28px;
+    background: linear-gradient(135deg, #ffffff, #fff5fa);
+    border-radius: 20px;
+    border-left: 5px solid #e91e63;
+    box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.sekolah-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(216, 27, 96, 0.22);
+}
+
+.sekolah-logo {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffe0ec;
+    border-radius: 50%;
+    font-size: 30px;
+    box-shadow: 0 6px 15px rgba(216, 27, 96, 0.15);
+    transition: 0.3s;
+}
+
+.sekolah-item:hover .sekolah-logo {
+    transform: scale(1.1);
+    background: #ffd1e2;
+}
+
+.sekolah-info span {
+    display: inline-block;
+    color: #e91e63;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sekolah-info h3 {
+    color: #4a2636;
+    font-size: 20px;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sekolah-info h3:hover {
+    color: #e91e63;
+    text-decoration: underline;
+}
+
+
 /* =========================
-   TAMBAHAN TAMPILAN KEAHLIAN
+   MODAL FOTO
+========================= */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(74, 38, 54, 0.65);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    width: 90%;
+    max-width: 550px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    animation: modalMuncul 0.3s ease;
+}
+
+.modal-box h2 {
+    color: #d81b60;
+    margin-bottom: 18px;
+}
+
+#modal-foto {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ffe0ec;
+    color: #d81b60;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modal-close:hover {
+    background: #e91e63;
+    color: white;
+}
+
+@keyframes modalMuncul {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   KEAHLIAN
 ========================= */
 
 .skills-container {
@@ -177,8 +176,6 @@
     box-shadow: 0 18px 35px rgba(216, 27, 96, 0.20);
 }
 
-/* ICON */
-
 .skill-icon {
     width: 70px;
     height: 70px;
@@ -196,8 +193,6 @@
     transform: scale(1.12) rotate(5deg);
     background: #ffd1e2;
 }
-
-/* ISI */
 
 .skill-content {
     flex: 1;
@@ -219,8 +214,6 @@
     color: #e91e63;
     font-weight: bold;
 }
-
-/* PROGRESS BAR */
 
 .skill-bar {
     width: 100%;
@@ -246,7 +239,21 @@
     line-height: 1.5;
 }
 
-/* ANIMASI */
+.skill-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
 
 @keyframes skillMuncul {
     from {
@@ -270,39 +277,9 @@
     }
 }
 
-/* ANIMASI BERURUTAN */
-
-.skill-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.skill-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.skill-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.skill-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-/* HP */
-
-@media (max-width: 700px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-
-    .skill-card {
-        padding: 20px;
-    }
-}
 
 /* =========================
-   HOME LEBIH MENARIK
+   HOME
 ========================= */
 
 .hero {
@@ -319,10 +296,12 @@
 
 .hero-content {
     max-width: 850px;
+    width: 100%;
     text-align: center;
     padding: 70px 20px;
     position: relative;
     z-index: 2;
+    margin: 0 auto;
     animation: homeMuncul 1s ease;
 }
 
@@ -362,6 +341,7 @@
 .hero-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-top: 25px;
 }
@@ -396,13 +376,11 @@
     transform: translateY(-4px);
 }
 
-/* DEKORASI */
-
 .hero-decoration {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
 }
 
 .circle {
@@ -438,11 +416,8 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(216, 27, 96, 0.12);
     font-family: monospace;
-    transform: rotate(5deg);
     animation: mengambang 3s ease-in-out infinite;
 }
-
-/* ANIMASI */
 
 @keyframes homeMuncul {
     from {
@@ -478,36 +453,9 @@
     }
 }
 
-/* HP */
-
-@media (max-width: 700px) {
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-description {
-        font-size: 20px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-buttons .btn {
-        width: 200px;
-        text-align: center;
-    }
-
-    .code-box {
-        display: none;
-    }
-
-}
 
 /* =========================
-   KONTAK LEBIH MENARIK
+   KONTAK
 ========================= */
 
 .contact-container {
@@ -518,8 +466,6 @@
     gap: 30px;
     align-items: stretch;
 }
-
-/* BAGIAN KIRI */
 
 .contact-intro {
     background: linear-gradient(135deg, #e91e63, #d81b60);
@@ -532,6 +478,7 @@
     box-shadow: 0 15px 35px rgba(216, 27, 96, 0.20);
     position: relative;
     overflow: hidden;
+    animation: kontakKiri 0.8s ease;
 }
 
 .contact-intro::after {
@@ -553,14 +500,13 @@
     margin-bottom: 10px;
 }
 
-/* KARTU KONTAK */
-
 .contact-card {
     background: #ffffff;
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12);
     border: 1px solid #ffe0ec;
+    animation: kontakKanan 0.8s ease;
 }
 
 .contact-item {
@@ -584,8 +530,6 @@
     box-shadow: 0 8px 20px rgba(216, 27, 96, 0.10);
 }
 
-/* ICON */
-
 .contact-icon {
     width: 60px;
     height: 60px;
@@ -603,8 +547,6 @@
     transform: scale(1.1) rotate(5deg);
     background: #ffd1e2;
 }
-
-/* TEKS */
 
 .contact-item h3 {
     margin: 0 0 5px;
@@ -626,16 +568,6 @@
 .contact-item a:hover {
     color: #d81b60;
     text-decoration: underline;
-}
-
-/* ANIMASI */
-
-.contact-intro {
-    animation: kontakKiri 0.8s ease;
-}
-
-.contact-card {
-    animation: kontakKanan 0.8s ease;
 }
 
 @keyframes kontakKiri {
@@ -662,30 +594,9 @@
     }
 }
 
-/* HP */
 
-@media (max-width: 700px) {
-
-    .contact-container {
-        grid-template-columns: 1fr;
-        margin: 30px 20px;
-    }
-
-    .contact-intro {
-        padding: 30px 25px;
-    }
-
-    .contact-card {
-        padding: 20px;
-    }
-
-    .contact-item {
-        padding: 15px;
-    }
-
-}
 /* =========================
-   TENTANG SAYA LEBIH MENARIK
+   TENTANG SAYA
 ========================= */
 
 .about-main-card {
@@ -704,8 +615,6 @@
     animation: tentangMuncul 0.8s ease;
 }
 
-/* DEKORASI KARTU */
-
 .about-main-card::before {
     content: "💗";
     position: absolute;
@@ -714,8 +623,6 @@
     font-size: 100px;
     opacity: 0.08;
 }
-
-/* FOTO */
 
 .about-photo {
     width: 220px;
@@ -730,7 +637,6 @@
 
 .about-photo:hover {
     transform: scale(1.05) rotate(3deg);
-    box-shadow: 0 15px 35px rgba(216, 27, 96, 0.30);
 }
 
 .about-photo img {
@@ -741,8 +647,6 @@
     display: block;
     border: 5px solid white;
 }
-
-/* TEKS */
 
 .about-main-text {
     position: relative;
@@ -760,8 +664,6 @@
     color: #e91e63;
 }
 
-/* KARTU KECIL */
-
 .about-highlights {
     max-width: 950px;
     margin: 0 auto;
@@ -769,8 +671,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
-
-/* ITEM */
 
 .about-highlight-item {
     display: flex;
@@ -796,10 +696,7 @@
 .about-highlight-item:hover {
     transform: translateY(-8px);
     background: #fff8fb;
-    box-shadow: 0 18px 35px rgba(216, 27, 96, 0.18);
 }
-
-/* ICON */
 
 .about-highlight-icon {
     width: 60px;
@@ -819,8 +716,6 @@
     background: #ffd1e2;
 }
 
-/* TEKS KECIL */
-
 .about-highlight-text {
     flex: 1;
 }
@@ -837,8 +732,6 @@
     font-size: 14px;
     line-height: 1.7;
 }
-
-/* ANIMASI */
 
 @keyframes tentangMuncul {
     from {
@@ -864,38 +757,9 @@
     }
 }
 
-/* HP */
 
-@media (max-width: 700px) {
-
-    .about-main-card {
-        flex-direction: column;
-        text-align: center;
-        margin: 30px 20px;
-        padding: 30px 20px;
-    }
-
-    .about-photo {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-main-text p {
-        font-size: 15px;
-    }
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-        margin: 0 20px;
-    }
-
-    .about-highlight-item {
-        padding: 20px;
-    }
-
-}
 /* =========================
-   PROYEK LEBIH MENARIK
+   PROYEK
 ========================= */
 
 .project-container {
@@ -905,8 +769,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
-
-/* KARTU PROYEK */
 
 .project-card {
     position: relative;
@@ -922,8 +784,6 @@
     animation: proyekMuncul 0.8s ease both;
 }
 
-/* GARIS PINK DI ATAS */
-
 .project-card::before {
     content: "";
     position: absolute;
@@ -933,8 +793,6 @@
     height: 5px;
     background: linear-gradient(90deg, #e91e63, #ff80ab);
 }
-
-/* DEKORASI */
 
 .project-card::after {
     content: "✦";
@@ -946,15 +804,10 @@
     opacity: 0.05;
 }
 
-/* HOVER */
-
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(216, 27, 96, 0.20);
-    border-color: #ffb6ce;
 }
-
-/* ICON */
 
 .project-icon {
     width: 70px;
@@ -966,7 +819,6 @@
     background: #ffe0ec;
     border-radius: 20px;
     font-size: 35px;
-    box-shadow: 0 8px 18px rgba(216, 27, 96, 0.12);
     transition: 0.4s ease;
 }
 
@@ -974,8 +826,6 @@
     transform: scale(1.12) rotate(5deg);
     background: #ffd1e2;
 }
-
-/* ISI PROYEK */
 
 .project-content {
     flex: 1;
@@ -1005,8 +855,6 @@
     line-height: 1.7;
 }
 
-/* TEKNOLOGI */
-
 .project-tech {
     display: flex;
     flex-wrap: wrap;
@@ -1026,24 +874,7 @@
 .project-tech span:hover {
     background: #e91e63;
     color: white;
-    transform: translateY(-2px);
 }
-
-/* ANIMASI */
-
-@keyframes proyekMuncul {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ANIMASI BERURUTAN */
 
 .project-card:nth-child(1) {
     animation-delay: 0.1s;
@@ -1061,11 +892,97 @@
     animation-delay: 0.4s;
 }
 
+@keyframes proyekMuncul {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* =========================
    TAMPILAN HP
 ========================= */
 
 @media (max-width: 700px) {
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 200px;
+        text-align: center;
+    }
+
+    .code-box {
+        display: none;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        margin: 30px 20px;
+    }
+
+    .contact-intro {
+        padding: 30px 25px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .contact-item {
+        padding: 15px;
+    }
+
+    .about-main-card {
+        flex-direction: column;
+        text-align: center;
+        margin: 30px 20px;
+        padding: 30px 20px;
+    }
+
+    .about-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-main-text p {
+        font-size: 15px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+    }
+
+    .about-highlight-item {
+        padding: 20px;
+    }
 
     .project-container {
         grid-template-columns: 1fr;
@@ -1086,4 +1003,35 @@
         font-size: 19px;
     }
 
+    /* PENDIDIKAN */
+
+    .sekolah-list {
+        margin: 30px 20px;
+    }
+
+    .sekolah-item {
+        padding: 18px 20px;
+        gap: 15px;
+    }
+
+    .sekolah-logo {
+        width: 55px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .sekolah-info h3 {
+        font-size: 17px;
+    }
+
+    /* MODAL FOTO */
+
+    .modal-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #modal-foto {
+        max-height: 300px;
+    }
 }
