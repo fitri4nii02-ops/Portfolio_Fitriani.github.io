@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-  <script src="script.js"></script>
+
+<script src="script.js"></script>
+
 <body>
 
     <!-- NAVBAR -->
-
     <header>
 
         <nav class="navbar">
@@ -29,39 +30,27 @@
             <ul class="nav-menu">
 
                 <li>
-                    <a href="index.html">
-                        Home
-                    </a>
+                    <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="tentang.html">
-                        Tentang Saya
-                    </a>
+                    <a href="tentang.html">Tentang Saya</a>
                 </li>
 
                 <li>
-                    <a href="pendidikan.html">
-                        Pendidikan
-                    </a>
+                    <a href="pendidikan.html">Pendidikan</a>
                 </li>
 
                 <li>
-                    <a href="keahlian.html">
-                        Keahlian
-                    </a>
+                    <a href="keahlian.html">Keahlian</a>
                 </li>
 
                 <li>
-                    <a href="proyek.html" class="active">
-                        Proyek
-                    </a>
+                    <a href="proyek.html" class="active">Proyek</a>
                 </li>
 
                 <li>
-                    <a href="kontak.html">
-                        Kontak
-                    </a>
+                    <a href="kontak.html">Kontak</a>
                 </li>
 
             </ul>
@@ -72,7 +61,6 @@
 
 
     <!-- PROYEK -->
-
     <main>
 
         <section class="page-section">
@@ -90,7 +78,6 @@
 
 
                 <!-- PROJECT 1 -->
-
                 <div class="project-card">
 
                     <div class="project-icon">
@@ -116,8 +103,13 @@
 
                         <div class="project-tech">
 
-                            <span>HTML</span>
-                            <span>CSS</span>
+                            <span onclick="tampilContoh('html')">
+                                HTML
+                            </span>
+
+                            <span onclick="tampilContoh('css')">
+                                CSS
+                            </span>
 
                         </div>
 
@@ -127,7 +119,6 @@
 
 
                 <!-- PROJECT 2 -->
-
                 <div class="project-card">
 
                     <div class="project-icon">
@@ -153,8 +144,13 @@
 
                         <div class="project-tech">
 
-                            <span>C++</span>
-                            <span>Programming</span>
+                            <span onclick="tampilContoh('cpp')">
+                                C++
+                            </span>
+
+                            <span onclick="tampilContoh('programming')">
+                                Programming
+                            </span>
 
                         </div>
 
@@ -164,7 +160,6 @@
 
 
                 <!-- PROJECT 3 -->
-
                 <div class="project-card">
 
                     <div class="project-icon">
@@ -190,8 +185,13 @@
 
                         <div class="project-tech">
 
-                            <span>Networking</span>
-                            <span>IP Address</span>
+                            <span onclick="tampilContoh('networking')">
+                                Networking
+                            </span>
+
+                            <span onclick="tampilContoh('ip')">
+                                IP Address
+                            </span>
 
                         </div>
 
@@ -201,7 +201,6 @@
 
 
                 <!-- PROJECT 4 -->
-
                 <div class="project-card">
 
                     <div class="project-icon">
@@ -227,15 +226,19 @@
 
                         <div class="project-tech">
 
-                            <span>MySQL</span>
-                            <span>Database</span>
+                            <span onclick="tampilContoh('mysql')">
+                                MySQL
+                            </span>
+
+                            <span onclick="tampilContoh('database')">
+                                Database
+                            </span>
 
                         </div>
 
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -244,8 +247,32 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- POPUP CONTOH -->
+    <div id="contohModal" class="contoh-modal">
 
+        <div class="contoh-box">
+
+            <button class="close-contoh"
+                onclick="tutupContoh()">
+                ×
+            </button>
+
+            <h2 id="contohJudul">
+                Contoh
+            </h2>
+
+            <p id="contohDeskripsi">
+                Contoh program
+            </p>
+
+            <pre><code id="contohKode"></code></pre>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
     <footer>
 
         <h3>
@@ -261,7 +288,9 @@
         </p>
 
     </footer>
-<script src="script.js"></script>
+
+
+    <script src="script.js"></script>
 
 </body>
 
