@@ -640,33 +640,51 @@ document.addEventListener(
 
     }
 );
-// ANIMASI MENGETIK "SAYA FITRIANI"
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    const typingText = document.getElementById("typing-text");
+/* =========================
+   ANIMASI MENGETIK NAMA
+========================= */
 
-    if (typingText) {
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const typingText =
+            document.getElementById("typing-text");
+
+
+        if (!typingText) return;
+
 
         const text = "Saya Fitriani";
+
         let index = 0;
+
+
+        typingText.textContent = "";
+
 
         function typeText() {
 
             if (index < text.length) {
 
-                typingText.textContent += text.charAt(index);
+                typingText.textContent +=
+                    text.charAt(index);
 
                 index++;
 
-                setTimeout(typeText, 150);
+                setTimeout(
+                    typeText,
+                    150
+                );
 
             }
 
         }
 
+
         typeText();
 
     }
-
-});
+);
